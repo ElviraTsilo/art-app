@@ -1,0 +1,19 @@
+<h2>Create a New Painting</h2>
+       
+<%= from_for @painting do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, :required => true %><br>
+
+<%= f.label :price %>
+<%= f.text_field: price, :required => true %> <br>
+
+<%= f.label :artist %>
+<%= f.collection_select :gallery_id, @galleries, :id, :name %>
+
+ <%=f.label :gallery %>
+ <%= f.collection_select :gallery_id, @galleries, :id, :name %>
+
+ <%= f.submit %>
+
+<% end %>
+    

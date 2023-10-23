@@ -1,0 +1,7 @@
+<h2>Here is a list of all the BEAUTIFUL paintings!<h2>
+
+    <ul>
+        <% @paintings.each do |painting| %>
+        <li><%= link_to painting.name, painting %></li><br>
+        <% end %>
+    </ul>
