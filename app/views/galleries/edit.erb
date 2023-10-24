@@ -1,0 +1,14 @@
+<h2>Edit your Gallery HERE</h2>
+
+<ul>
+    <%= form_for @artist do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %><br />
+
+    <%= f.label :Location %>
+    <%= f.number_field :location, :required => true %> <br />
+
+     <%= f.submit "Update Gallery" %>
+
+    <% end %>
+</ul>

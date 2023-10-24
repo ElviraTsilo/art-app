@@ -1,0 +1,10 @@
+<h2><%= "#{@gallety.name} Info Page" %></h2>
+
+<label>Name:</label>
+<%= @gallery.name %><br />
+
+<label>Location:</label>
+<%= @gallery.location %><br />
+
+<label>List of paintings that can be found here:</label>
+<%= button_to "Going Out Of Business", @gallery, method: :delete %>

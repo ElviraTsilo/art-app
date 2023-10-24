@@ -1,19 +1,17 @@
 <h2>Create a New Artist HERE</h2>
 
-    <ul>
-       
-        <%= from_for @artist do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name, :required => true %><br>
+<ul>
+    <%= from_for @artist do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %><br />
 
-        <%= f.label :age %>
-        <%= f.number_field :age, :required => true %> <br>
+    <%= f.label :age %>
+    <%= f.number_field :age, :required => true %><br />
 
-        <%= f.label :experience_level %>
-        <%= f.select :experience, (1..10) %>
+    <%= f.label :experience_level %>
+    <%= f.select :experience, (1..10) %>
 
-        <%=f.submit "Create New Artist" %>
+    <%=f.submit "Create New Artist" %>
 
-        <% end %>
-    
-    <ul>
+    <% end %>
+<ul>

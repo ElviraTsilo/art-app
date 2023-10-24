@@ -12,7 +12,7 @@ class GalleriesController < ApplicationController
     end
 
     def create 
-        @galery = Galery.create(artist_params)
+        @galery = Galery.create(gallery_params)
 
         redirect_to @galery
     end
@@ -30,12 +30,12 @@ class GalleriesController < ApplicationController
 
     def destroy
         @galery = Galery.find(params[:id])
-        galery.destroy
+        @galery.destroy
     end
 
     private
 
     def galery_params
-        params.require(:galery).permit(:name, :location, :experience_level)
+        params.require(:galery).permit(:name, :location)
     end
 end
