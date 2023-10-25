@@ -8,34 +8,34 @@ class GalleriesController < ApplicationController
     end
 
     def new
-        @gallery = Galery.new
+        @gallery = Gallery.new
     end
 
     def create 
-        @galery = Galery.create(gallery_params)
+        @gallery = Gallery.create(gallery_params)
 
-        redirect_to @galery
+        redirect_to @gallery
     end
 
     def edit
-        @galery = Galery.find(params[:id])
+        @gallery = Gallery.find(params[:id])
     end
 
     def update
-        @galery = Galery.find(params[:id])
-        @galery.update(galery_params)
+        @gallery = Gallery.find(params[:id])
+        @gallery.update(gallery_params)
 
-        redirect_to @galery
+        redirect_to @gallery
     end
 
     def destroy
-        @galery = Galery.find(params[:id])
-        @galery.destroy
+        @gallery = Gallery.find(params[:id])
+        @gallery.destroy
     end
 
     private
 
-    def galery_params
-        params.require(:galery).permit(:name, :location)
+    def gallery_params
+        params.require(:gallery).permit(:name, :location)
     end
 end
